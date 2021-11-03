@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Bullet</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.min.js"></script>
+        <script src="./js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="logo">Logo</div>
+        <button class="btn_signin">Sign in<b><span></span></b></button>
+    </div>
+    <div class="modelWrapper">
+        <div class="model">
+            <form class="form-try" method="post" action="">
+                <div class="signIn">
+                    <div class="modelHead">
+                        <h3>Login or Register for best experience</h3>
+                        <button class="btnClose">Close</button>
+                    </div>
+                    <div class="modelbody">
+                        <label>Mobile</label>
+                        <div class="parent input mobileInput">
+                            <span class="countryCode">+91</span>
+                            <input type="text" name="mobile" class="mobile" placeholder="Enter Mobile No." />
+                            <button class="gOtp">Get OTP</button>
+                            <span class="msg"></span>
+                        </div>
+                        <label>OTP</label>
+                        <div class="input">
+                            <input type="text" placeholder="Enter OTP">
+                        </div>
+                        <div class="submit-button">
+                            <input class="btn" type="submit" name="signup" value="Sign Up" />
+                        </div>
+                    </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+        $(".input.mobileInput input").bind('keyup mouseup', function () {
+            $('.gOtp').addClass('active');
+        });
+
+        $('.btn_signin').on('click', function () {
+            $('.modelWrapper').addClass('active')
+        });
+
+        $('.btnClose').on('click', function () {
+            $('.modelWrapper').removeClass('active')
+        });
+    </script>
+</body>
+
+</html>

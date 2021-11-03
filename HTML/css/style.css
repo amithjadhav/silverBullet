@@ -1,0 +1,263 @@
+* {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/Homepage.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 840px;
+    max-width: 1600px;
+    background-size: contain;
+    font-family: 'calibri', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #232323;
+}
+
+input:focus-visible {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    font-size: 0.7rem;
+    color: #474b6d;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 25px 0;
+    color: #474b6d;
+
+}
+
+.btn_signin {
+    color: #2e86ab;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding-right: 55px;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn_signin b {
+    position: absolute;
+    right: 0;
+    top: 16px;
+    border: solid 1px #2e86ab;
+    width: 40px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.btn_signin b span {
+    position: absolute;
+    width: 15px;
+    margin-left: -7px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    background-color: #2e86ab;
+}
+
+.btn_signin b span:before,
+.btn_signin b span:after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -5px;
+    background-color: #2e86ab;
+    width: 100%;
+    height: 2px;
+}
+
+.btn_signin b span:after {
+    right: 0px;
+    left: auto;
+    width: 50%;
+    top: 5px;
+}
+
+.modelWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+}
+
+.modelWrapper.active {
+    display: flex;
+    animation-duration: 1s;
+    animation-iteration-count: initial;
+    animation-name: modelWrap;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes modelWrap {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes modelWrap {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.model {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    padding: 20px;
+    position: relative;
+}
+
+.modelHead h3 {
+    font-weight: 100;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #474b6d;
+}
+
+.btnClose {
+    font-size: 0;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
+}
+
+.btnClose:before,
+.btnClose:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.btnClose:after {
+    transform: rotate(-45deg);
+}
+
+.modelbody {
+    padding: 20px 0 0;
+}
+
+.gOtp {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #474b6d;
+    opacity: 0.5;
+}
+
+.gOtp.active {
+    opacity: 1;
+    transition: 0.3s ease all;
+}
+
+.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input input {
+    border: solid 1px #d1d1d1;
+    border-radius: 2px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input.mobileInput input {
+    padding: 10px 80px 10px 50px;
+}
+
+.countryCode {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.btn {
+    background-color: #2e86ab;
+    color: #ffffff;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    font-weight: 700;
+    margin-top: 40px;
+    border: 0;
+    border-radius: 2px;
+}
+
+
+.submit_btn {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+.msg {
+    color: red;
+    font-size: 15px;
+    display: block;
+}
